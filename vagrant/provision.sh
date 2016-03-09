@@ -20,6 +20,9 @@ cp /vagrant/VirtualHost/jenkins.conf /etc/apache2/sites-available
 a2ensite jenkins.conf
 service apache2 restart
 
+apt-get -y install git
+
+
 #############################################################
 # Install Jenkins plugins
 #############################################################
