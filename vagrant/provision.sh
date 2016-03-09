@@ -55,6 +55,7 @@ curl -X POST http://jenkins.local/reload
 apt-get -y install git
 apt-get -y install php5
 
+
 ###
 wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
@@ -85,7 +86,18 @@ wget https://phar.phpunit.de/phpcpd.phar
 chmod +x phpcpd.phar
 sudo mv phpcpd.phar /usr/local/bin/phpcpd
 
+###
+wget -c http://www.phing.info/get/phing-latest.phar
+chmod +x phing-latest.phar
+sudo mv phing-latest.phar /usr/local/bin/phing
 
+###
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
+###
+# apt-get -y install sendmail
+# sudo apt-get install mailutils
 
 
 
