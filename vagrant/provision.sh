@@ -54,12 +54,11 @@ curl -X POST http://jenkins.local/reload
 
 apt-get -y install git
 apt-get -y install php5
+apt-get -y install php5-xdebug
 
 
 ###
-wget https://phar.phpunit.de/phpunit.phar
-chmod +x phpunit.phar
-sudo mv phpunit.phar /usr/local/bin/phpunit
+apt-get -y install phpunit
 
 ###
 curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
@@ -98,6 +97,14 @@ sudo mv composer.phar /usr/local/bin/composer
 ###
 # apt-get -y install sendmail
 # sudo apt-get install mailutils
+
+##
+# https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
+sudo add-apt-repository -y ppa:ondrej/php5-5.6
+sudo apt-get update
+sudo apt-get install php5
+
+
 
 
 
