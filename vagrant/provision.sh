@@ -71,22 +71,22 @@ chmod +x phpcbf.phar
 sudo mv phpcbf.phar /usr/local/bin/phpcbf
 
 ###
-wget https://phar.phpunit.de/phploc.phar
+curl -OL https://phar.phpunit.de/phploc.phar
 chmod +x phploc.phar
 sudo mv phploc.phar /usr/local/bin/phploc
 
 ###
-wget -c http://static.phpmd.org/php/latest/phpmd.phar
+curl -OL http://static.phpmd.org/php/latest/phpmd.phar
 chmod +x phpmd.phar
 sudo mv phpmd.phar /usr/local/bin/phpmd
 
 ###
-wget https://phar.phpunit.de/phpcpd.phar
+curl -OL https://phar.phpunit.de/phpcpd.phar
 chmod +x phpcpd.phar
 sudo mv phpcpd.phar /usr/local/bin/phpcpd
 
 ###
-wget -c http://www.phing.info/get/phing-latest.phar
+curl -OL http://www.phing.info/get/phing-latest.phar
 chmod +x phing-latest.phar
 sudo mv phing-latest.phar /usr/local/bin/phing
 
