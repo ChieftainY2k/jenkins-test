@@ -102,7 +102,7 @@ sudo mv composer.phar /usr/local/bin/composer
 # https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
 sudo add-apt-repository -y ppa:ondrej/php5-5.6
 sudo apt-get update
-sudo apt-get install php5
+sudo apt-get -y install php5
 
 
 
