@@ -5,7 +5,17 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.hostname = "jenkins"
+
+   if Vagrant.has_plugin?("vagrant-hostmanager") then
+      config.hostmanager.enabled = true
+      config.hostmanager.manage_host = true
+      config.hostmanager.ignore_private_ip = false
+      config.hostmanager.include_offline = true
+    else
+      puts "Please install plugin hostmanager: $ vagrant plugin install vagrant-hostmanager"
+    end
+
+  config.vm.hostname = "jenkins.local"
   config.vm.box = "ubuntu/trusty32"
   config.vm.network :forwarded_port, guest: 80, host: 8082
   config.vm.provision "shell", path: "provision.sh"

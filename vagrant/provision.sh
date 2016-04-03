@@ -20,8 +20,6 @@ cp /vagrant/VirtualHost/jenkins.conf /etc/apache2/sites-available
 a2ensite jenkins.conf
 service apache2 restart
 
-
-
 #############################################################
 # Install Jenkins plugins
 #############################################################
@@ -47,6 +45,8 @@ chown -R jenkins:nogroup *
 
 curl -X POST http://jenkins.local/reload
 /etc/init.d/jenkins restart
+
+
 
 #########
 # Install tools for PHP code
